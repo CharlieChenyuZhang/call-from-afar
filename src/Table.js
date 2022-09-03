@@ -27,13 +27,16 @@ function createData(name, calories, fat, carbs, protein) {
     carbs,
     protein,
     history: {
-      date: `
-        The 63rd Thessaloniki International Film Festival will take place from November 3rd to November 13th 2022 and has the pleasure to announce that film submissions are now open.TIFF has four competition sections: International Competition (a program with films from across the Globe), Meet the Neighbors Competition (with first or second features from Greece's extended "neighborhood" ), the Film Forward Competition section and the VR Competition section.
-    `,
-      customerId:
-        "https://www.filmfestival.gr/en/all-news-en/28013-submit-your-film-to-the-63rd-thessaloniki-international-film-festival-3-13-11-2022",
-      amount: "25 CAD",
-      contact: "Thessaloniki Film Festival",
+      Description:
+        "The Rijksakademie welcomes applications from artists to develop their work over one or two-year periods in Amsterdam.",
+      Genre: "all disciplines",
+      Theme: "Open",
+      HostProvides:
+        "studio, work budget and stipend, technical facilities, a library, collections and a social practice workshop",
+      Eligibility: "N/A",
+      ApplicationFee: "€50",
+      PastRecipients: "Edra Soto Kent Chan",
+      Link: "https://www.rijksakademie.nl/en/residency-apply-workshops/apply",
     },
   };
 }
@@ -73,52 +76,60 @@ function Row(props) {
                 Description
               </Typography>
               <Typography variant="body" gutterBottom component="div">
-                {row.history.date}
+                {row.history.Description}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                Genre
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.Genre}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                Theme
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.Theme}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                Host Provides
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.HostProvides}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                Eligibility
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.Eligibility}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                ApplicationFee
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.ApplicationFee}
+              </Typography>
+              <br />
+              <Typography variant="h6" gutterBottom component="div">
+                PastRecipients
+              </Typography>
+              <Typography variant="body" gutterBottom component="div">
+                {row.history.PastRecipients}
               </Typography>
               <br />
               <Typography variant="h6" gutterBottom component="div">
                 Link
               </Typography>
               <Typography variant="body" gutterBottom component="div">
-                <a href={row.history.customerId}>Click Here</a>
+                <a href={row.history.Link} target="_blank">
+                  Click Here
+                </a>
               </Typography>
               <br />
-              <Typography variant="h6" gutterBottom component="div">
-                Participation Fee
-              </Typography>
-              <Typography variant="body" gutterBottom component="div">
-                {row.history.amount}
-              </Typography>
-              <br />
-              <Typography variant="h6" gutterBottom component="div">
-                Contact
-              </Typography>
-              <Typography variant="body" gutterBottom component="div">
-                {row.history.contact}
-              </Typography>
-
-              {/* <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Description</TableCell>
-                    <TableCell>Link</TableCell>
-                    <TableCell align="right">Participation Fee</TableCell>
-                    <TableCell align="right">Contact</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.date}>
-                      <TableCell component="th" scope="row">
-                        {historyRow.date}
-                      </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                      <TableCell align="right">{historyRow.contact}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table> */}
             </Box>
           </Collapse>
         </TableCell>
@@ -147,40 +158,85 @@ Row.propTypes = {
 
 const rows = [
   createData(
-    "July 27. 2022",
-    "63rd Thessaloniki International Film Festival",
-    10000,
-    "Toronto, Canada",
-    "no restrictions"
+    "1 October 2022",
+    "1-2 years",
+    "The Rijksakademie Residency 2023/2024",
+    "AiR",
+    "Netherlands"
   ),
   createData(
-    "July 28. 2022",
-    "5th VH Award",
-    10000,
-    "Toronto, Canada",
-    "no restrictions"
+    "Sep 10 2022",
+    "2 months",
+    "SODAS 2123 - Residency for Sound Artists",
+    "AiR",
+    "France"
   ),
   createData(
-    "July 27. 2022",
-    "Academy Award",
-    10000,
-    "Toronto, Canada",
-    "no restrictions"
+    "Sep 15 2022",
+    "3 weeks",
+    "Bloedel Reserve Creative Residency program",
+    "AiR",
+    "The USA"
   ),
   createData(
-    "July 26. 2022",
-    "63rd Tookws Festival",
-    10000,
-    "Toronto, Canada",
-    "no restrictions"
+    "Anytime",
+    "3 months",
+    "ENSA Limoges - Residence",
+    "AiR",
+    "France"
   ),
   createData(
-    "July 25. 2022",
-    "1st Innovation Art Design Award",
-    10000,
-    "Toronto, Canada",
-    "no restrictions"
+    "Sep 30 2022",
+    "1 month",
+    "Maison forte de Hautetour",
+    "AiR",
+    "France"
   ),
+  createData(
+    "Oct 18 2022",
+    "3 months",
+    "Pyramid Atlantic Art Center - Vita Paper Arts Residency",
+    "AiR",
+    "The USA"
+  ),
+  createData(
+    "Oct 15 2022",
+    "N/A",
+    "Stipend of the Peter Jacobi Foundation for Art and Design",
+    "Grant",
+    "Germany"
+  ),
+  createData("Anytime", "N/A", "Pollock-Krasner grant", "Grant", "The USA"),
+  createData("Anytime", "N/A", "Artists’ Fellowship", "Grant", "The USA"),
+  createData(
+    "Oct 21 2022",
+    "N/A",
+    "Craft Research Fund Project Grant",
+    "Grant",
+    "The USA"
+  ),
+  createData(
+    "Dec 1 2022",
+    "N/A",
+    "Smack Mellon - Solo Exhibition",
+    "Exhibition",
+    "The USA"
+  ),
+  createData(
+    "Anytime",
+    "N/A",
+    "Envision Arts - Exhibition",
+    "Exhibition",
+    "The USA"
+  ),
+  createData(
+    "Sep 30 2022",
+    "N/A",
+    "Luxembourg Art Prize",
+    "Competition",
+    "Luxembourg"
+  ),
+  createData("Oct 10 2022", "N/A", "Prisma Art Prize", "Competition", "Italy"),
 ];
 
 export default function App() {
@@ -191,10 +247,10 @@ export default function App() {
           <TableRow>
             <TableCell />
             <TableCell>Deadline</TableCell>
-            <TableCell align="right">Information</TableCell>
-            <TableCell align="right">Reward&nbsp;(CAD)</TableCell>
-            <TableCell align="right">Location</TableCell>
-            <TableCell align="right">Eligibility</TableCell>
+            <TableCell align="right">Duration</TableCell>
+            <TableCell align="right">Name</TableCell>
+            <TableCell align="right">Type</TableCell>
+            <TableCell align="right">Country</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

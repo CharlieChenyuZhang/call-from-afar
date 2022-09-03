@@ -16,13 +16,13 @@ code {
     monospace;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 725px) {
   .table {
     display: none;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 725px) {
   .tableMobile {
     display: none;
   }
